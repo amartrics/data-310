@@ -2,7 +2,7 @@
 A repository for posting assignments, code, and informal responses for Professor Frazier's DATA 310 course, Applied Machine Learning.
 
 ## Informal Responses and Exercises
-- Week 1
+- [Week 1](tues1.md)
 - Week 2
 - Week 3
 - Week 4
