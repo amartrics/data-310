@@ -2,6 +2,7 @@
 
 Start with the *Basic classification: Classify images of clothing* script that you prepared for class. Consider the following questions as you execute the code. 
 1. *From the Preprocess the data section of the script, modify the training image to produce three new images.* 
+![training_images](train_imgs.png)
 2. *Under the Make predictions section, present the array of predictions for an image from the test set other than the one given in the example script.* 
       a) *What does this array represent?*
       b) *How were the Softmax() and argmax() functions applied?*
