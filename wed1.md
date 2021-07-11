@@ -13,11 +13,14 @@ Start with the *Basic classification: Classify images of clothing* script that y
       
       c) *Does the output from np.argmax() match the label from your test_labels dataset?* Yes, the output from np.argmax() matches the label from the test_labels dataset for the image I tested (image 20), which is a pullover. 
       
-3. *Under the Verify predictions section, plot two additional images (other than either of the two given in the example script) and include the graph of their predicted label as well as the image itself.* ![image](https://user-images.githubusercontent.com/70035366/125183464-c5aa5680-e1e4-11eb-8f26-17fb24e6bd87.png)
+3. *Under the Verify predictions section, plot two additional images (other than either of the two given in the example script) and include the graph of their predicted label as well as the image itself.* 
+
+![image](https://user-images.githubusercontent.com/70035366/125183464-c5aa5680-e1e4-11eb-8f26-17fb24e6bd87.png)
 
 ![image](https://user-images.githubusercontent.com/70035366/125183493-e83c6f80-e1e4-11eb-97a2-6ea4b342aaea.png)
 
-4. *Under the Use the trained model section, again select a new image from the test dataset. Produce the predictions for this newly selected image.* ![image](https://user-images.githubusercontent.com/70035366/125183577-92b49280-e1e5-11eb-9af8-30de10c0b5fa.png)
+4. *Under the Use the trained model section, again select a new image from the test dataset. Produce the predictions for this newly selected image.* 
+![image](https://user-images.githubusercontent.com/70035366/125183577-92b49280-e1e5-11eb-9af8-30de10c0b5fa.png)
 
       a) *Does the predicted value match the test label?* The model thinks the predicted value is almost 100% a shirt/top in this situation. In reality (aka the test label), it is a shirt/top, so it seems that the two values match pretty well. 
       
