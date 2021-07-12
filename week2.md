@@ -1,1 +1,2 @@
-# Week 2 (7/12/21-7/18/21)
+# Week Two
+- Monday
