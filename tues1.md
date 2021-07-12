@@ -1,4 +1,4 @@
-# Week One, Day One: Tuesday (6/7/21)
+# Week One, Day One: Tuesday (7/6/21)
 Consider the dataset and code provided by the Fashion MNIST tensorflow tutorial. Then, answer the following questions. 
 
 *1. What is the shape of the images training set (how many and the dimension of each)?* The shape of the images training set is by 60,000 by 28 by 28. 
