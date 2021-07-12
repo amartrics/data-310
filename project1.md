@@ -5,7 +5,8 @@ For the purposes of this project, I used Apify to access data about home prices 
 
 ![image](https://user-images.githubusercontent.com/70035366/125334109-ff7c7980-e318-11eb-9de2-57ab7b7e2138.png)
 
-In comparing the actual prices to predicted prices, it is more evident that the model is not as interpretable as one might like. Due to outliers in the data (e.g., the point around (0.5, 13) on the scatterplot) the axline (or predicted line of correlation between the predicted and actual prices) is somewhat skewed towards irrelevant data that does not accurately represent that dataset as a whole. 
+   In comparing the actual prices to predicted prices, it is more evident that the model is not as interpretable as one might like. Due to outliers in the data (e.g., the          point around (0.5, 13) on the scatterplot) the axline (or predicted line of correlation between the predicted and actual prices) is somewhat skewed towards irrelevant data 
+   that does not accurately represent that dataset as a whole. 
 
 ![image](https://user-images.githubusercontent.com/70035366/125336693-1ffa0300-e31c-11eb-97ee-159fc628ffb5.png)
 
