@@ -11,7 +11,7 @@ For the purposes of this project, I used Apify to access data about home prices 
 
 4. *Which of the predictions were the most accurate?* The houses that were higher priced (e.g. in the $1,000,000-$4,000,000 range) tended to have more accurate predictions. 
 
-      a) *In which percentile do these most accurate predictions reside?* The 75th percentile and above (the upper third of 
+      a) *In which percentile do these most accurate predictions reside?* The 75th percentile and above (the upper third of the dataset). 
       
       b) *Did your model trend towards over or under predicting home values?* Generally speaking, the model did not over or under predict in any excessive direction. However, it did seem to overestimate more than it underestimated. Since the dataset is so small, it would also be normal to expect overfitting on a larger scale. 
       
