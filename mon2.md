@@ -11,5 +11,5 @@ Using the regression script from class and the Auto Imports dataset from the UCI
 
 2. *Add additional continuous and categorical features with the intent of improving your loss metric. What is the best model you can produce?* Based on the results of the previous models, I thought I could make some positive changes to the loss function by adding more continuous variables to the model. In order to accomplish that goal, I tried adding length, width, height, and peak-rpm to the already present variables. The model performed a lot better with these modifications. Interestingly enough, however, with more modifications, the DNN modeling technique performed worse than the linear regression technique. 
 
-## Best Model: Linear Regression with Added Variables
+### Best Model: Linear Regression with Added Variables
 ![image](https://user-images.githubusercontent.com/70035366/125735530-4ebab5e8-de8c-4330-baf0-f99b5084fe68.png)
