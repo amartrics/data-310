@@ -1,0 +1,2 @@
+# Week Two, Day Four: Thursday (7/15/2021)
+Use tfds.load() to load a tensorflow dataset as illustrated in the section Using TensorFlow Datasets. Using the relevant parts from the entirety of the example script as a guide, fit a CNN model to your training data and validate using the beans dataset from Tensorflow datasets and then again train and validate using the eurosat dataset. Present your results and discuss the accuracy of each of model.
