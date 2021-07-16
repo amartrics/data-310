@@ -45,9 +45,15 @@ By applying a pooling filter, the overall amount of information in an image whil
 3. *Review the images from class and then convolve the 3x3 filter over the 9x9 matrix and provide the resulting matrix.* 
 
 [0 0 0 3 0 0 0]
+
 [0 0 0 3 0 0 0]
+
 [1 1 1 3 1 1 1]
+
 [1 1 1 3 1 1 1]
+
 [1 1 1 3 1 1 1]
+
 [0 0 0 3 0 0 0]
+
 [0 0 0 3 0 0 0]
