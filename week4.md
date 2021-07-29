@@ -1,2 +1,3 @@
 # Week 4
-- Monday (7/26/2021)
+- [Wednesday (7/28/21)](wed4.md)
+- [Thursday (7/29/21)](thurs4.md)
