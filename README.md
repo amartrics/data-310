@@ -10,5 +10,5 @@ A repository for posting assignments, code, and informal responses for Professor
 ## Projects
 - [Project 1](project1.md)
 - [Project 3](project3.md)
-- [Project 4](project4.md)
+- [Project 4](https://mkettelberger.github.io/data310/Project4.html)
 - Final Project
