@@ -12,10 +12,11 @@ The model ran for twenty epochs and was able to produce a somewhat readable text
 
 ROMEO:
 
-Thou art a bark! Though straight downright.
+Thou art a bark! Though straight downright. 
 
 
 CAMILLO:
+
 I was a fooler in the cause of his
 
 counterfeit, speak weather; and the would revolting well
