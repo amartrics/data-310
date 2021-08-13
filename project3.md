@@ -9,7 +9,7 @@ I ran the model 5 different times to analyze how well it was able to predict 5 d
 ## Results for Wealth Class 5 (Accuracy: 90.9%)
 ![image](https://user-images.githubusercontent.com/70035366/129300812-4aa1683b-e3f5-4771-99ab-38573fbf673e.png)
 
-## Results for Wealth Class 1 (Accuracy: 
+## Results for Wealth Class 1 (Accuracy: 69.9%)
 ![image](https://user-images.githubusercontent.com/70035366/129302057-45cdfd76-7ed4-4513-8873-922db75edab4.png)
 
 *Using the data and two models you produced in step 1, create a confusion matrix. With your confusion matrix as a reference, analyze and discuss the two sets of results you produced.* 
