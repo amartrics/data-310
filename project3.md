@@ -6,8 +6,8 @@ For the first step in this project, I loaded in the data, cleaned it by removing
 
 I ran the model 5 different times to analyze how well it was able to predict 5 different binary classes of wealth, with 1 representing the lowest class of wealth and 5 representing the highest class of wealth. The most accurate results came from binary wealth class 5, while the worst results came from binary wealth class 1. 
 
-## Results for Wealth Class 5 (Accuracy: 90.9%)
-![image](https://user-images.githubusercontent.com/70035366/129300812-4aa1683b-e3f5-4771-99ab-38573fbf673e.png)
+## Results for Wealth Class 5 (Accuracy: 95.9%)
+![image](https://user-images.githubusercontent.com/70035366/130373048-923211a0-82d5-46ff-9419-bc288b17e8bd.png)
 
 ## Results for Wealth Class 1 (Accuracy: 69.9%)
 ![image](https://user-images.githubusercontent.com/70035366/129302057-45cdfd76-7ed4-4513-8873-922db75edab4.png)
