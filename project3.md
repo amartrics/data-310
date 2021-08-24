@@ -16,13 +16,13 @@ I ran the model 5 different times to analyze how well it was able to predict 5 d
 
 *Using the data and two models you produced in step 1, create a confusion matrix. With your confusion matrix as a reference, analyze and discuss the two sets of results you produced.* 
 
+It looks like there was more diversity or confusion in the model's predictions for wealth class 1, and even though the model had the worst accuracy rate for this wealth class compared to predicting the others, it was able to more accurately predict which entries were *not* of the target wealth class than the "super-accurate" model run that produced the matrix for wealth class 5. This may be because there are simply more entries that fall into wealth class 5 than other wealth classes in the dataset, which would explain the differences in the matrices. 
+
 ## Confusion Matrix for Predicting Wealth Class 5 (Best Accuracy Rate) 
 ![image](https://user-images.githubusercontent.com/70035366/130542831-23426dc5-1d52-488f-8615-3dd82d62f1b4.png)
 
 ## Confusion Matrix for Predicting Wealth Class 1 (Worst Accuracy Rate)
 ![image](https://user-images.githubusercontent.com/70035366/130544384-56ba69e5-4b2e-4a6b-baf1-e82989698714.png)
-
-It looks like there was more diversity or confusion in the model's predictions for wealth class 1, and even though the model had the worst accuracy rate for this wealth class compared to predicting the others, it was able to more accurately predict which entries were *not* of the target wealth class than the "super-accurate" model run that produced the matrix for wealth class 5. This may be because there are simply more entries that fall into wealth class 5 than other wealth classes in the dataset, which would explain the differences in the matrices. 
 
 *Specify, train and evaluate a model that predicts all class of wealth outcomes as a categorical target.* 
 
