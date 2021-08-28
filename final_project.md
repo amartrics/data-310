@@ -125,12 +125,14 @@ _________________________________________________________________
 Discuss severe overfitting and how you addressed it
 
 ### Training & Validation Accuracy and Loss (15 Epochs, With Image Distortion and Dropout Implemented) 
-![image](https://user-images.githubusercontent.com/70035366/131229633-df2e48ae-c78d-4bbe-bc1f-c0d896bb1146.png)
+![image](https://user-images.githubusercontent.com/70035366/131231016-13d0e6e0-43db-47d2-b972-ed85d0a4867b.png)
 
 ### Testing on New Data
-![image](https://user-images.githubusercontent.com/70035366/131229647-d6db2ef6-ceed-4db5-96a6-a031d8f27ec1.png)
-![image](https://user-images.githubusercontent.com/70035366/131227408-716c491c-cf0b-4b80-807c-b7d6b2711e39.png)
-![image](https://user-images.githubusercontent.com/70035366/131227508-456bb178-ef11-45c3-8401-10cde9cbfc15.png)
+![image](https://user-images.githubusercontent.com/70035366/131231023-3c710944-96d2-4326-b8d0-2959d0dbd001.png)
+![image](https://user-images.githubusercontent.com/70035366/131231029-adcb6eb5-48de-4851-a4eb-d91112c5c6d3.png)
+![image](https://user-images.githubusercontent.com/70035366/131231039-df2d30b6-f392-4878-adb6-c89b9d08b87b.png)
+![image](https://user-images.githubusercontent.com/70035366/131231046-4aba93fb-d796-443d-98e2-d87a32bbbc98.png)
+![image](https://user-images.githubusercontent.com/70035366/131231059-cb9825b3-2e6a-483e-b16a-0e2ee36d88da.png)
 
 
 ## Conclusion
