@@ -3,6 +3,11 @@
 For my final project, I trained a convolutional neural network on a dataset of images from Kaggle to classify American Sign Language Letters. 
 
 ## The Data 
+### Training & Validation Data
+![image](https://user-images.githubusercontent.com/70035366/131227615-08d1fa3d-c5e7-4d29-b0a4-057926833bcf.png)
+
+### Augmented Training & Validation Data
+![image](https://user-images.githubusercontent.com/70035366/131227638-bdfa2d4a-4f3f-4596-a118-a82f013b33b2.png)
 
 ## The Model
 
