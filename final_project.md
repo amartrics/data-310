@@ -13,10 +13,10 @@ For my final project, I trained a convolutional neural network on a dataset of i
 
 ## Model Performance 
 ### Training & Validation Accuracy and Loss (10 Epochs, No Image Distortion) 
-![image](https://user-images.githubusercontent.com/70035366/131162757-2beac1c1-52d3-4af1-b9b4-354b3d275fbe.png)
+![image](https://user-images.githubusercontent.com/70035366/131229429-9fcc03a7-2695-4265-9cfc-6e1e8f672daf.png)
 
 ### Training & Validation Accuracy and Loss (15 Epochs, With Image Distortion and Dropout Implemented) 
-![image](https://user-images.githubusercontent.com/70035366/131227168-320c765b-b143-4e52-bfc8-1d7c7cbb4dc8.png)
+![image](https://user-images.githubusercontent.com/70035366/131229633-df2e48ae-c78d-4bbe-bc1f-c0d896bb1146.png)
 
 ### Testing on New Data
 ![image](https://user-images.githubusercontent.com/70035366/131227463-dbf42c0a-7eec-4ad4-aa05-e452469b3dc5.png)
