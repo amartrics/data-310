@@ -149,7 +149,7 @@ Discuss why you used two different test datasets, ramifications of the model's f
 ## Conclusion
 
 ## Sources
-### Literature 
+### Literature on ASL and the Deaf Community
 https://www.nad.org/resources/american-sign-language/community-and-culture-frequently-asked-questions/    
 https://en.wikipedia.org/wiki/American_Sign_Language    
 https://www.jstor.org/stable/pdf/26190621.pdf?casa_token=PPfABv4JnVEAAAAA:fIDLHurDDPhQptqw2LevuWFYUjF0zRky62cwbJ-oifI7aZD5qQbBDejMYajqAlmtxr3s0mtEtdnWhQ-wTdinEBrnJhDXlvxmLezjphP3uEpUgrlzXhbl    
