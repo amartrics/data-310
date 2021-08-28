@@ -59,7 +59,8 @@ Non-trainable params: 0
 ```
 
 ### Model Architecture v2 (After Implementing Image Augmentation and Dropout)
-```
+```python
+num_classes = 26
 data_augmentation = tf.keras.Sequential([
     tf.keras.layers.experimental.preprocessing.RandomFlip("horizontal", input_shape=(img_height, img_width, 3)),
     tf.keras.layers.experimental.preprocessing.RandomRotation(0.1),
