@@ -18,9 +18,9 @@ For my final project, I trained a convolutional neural network on a dataset of i
 ## Sources
 ### TensorFlow Tutorials
 https://www.tensorflow.org/tutorials/load_data/images    
-https://www.tensorflow.org/tutorials/keras/classification 
+https://www.tensorflow.org/tutorials/keras/classification    
 https://www.tensorflow.org/tutorials/images/classification  
 
 ### Data
-https://www.kaggle.com/danrasband/asl-alphabet-test 
+https://www.kaggle.com/danrasband/asl-alphabet-test    
 https://www.kaggle.com/grassknoted/asl-alphabet
