@@ -10,6 +10,7 @@ For my final project, I trained a convolutional neural network on a dataset of i
 ![image](https://user-images.githubusercontent.com/70035366/131227638-bdfa2d4a-4f3f-4596-a118-a82f013b33b2.png)
 
 ## The Model
+### Model Architecture v1 (Without Implementing Image Augmentation and Dropout)
 ```python
 num_classes = 26
 model = tf.keras.Sequential([
@@ -27,6 +28,93 @@ model.compile(optimizer='adam',
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
               metrics=['accuracy'])
 model.summary()
+
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+rescaling_1 (Rescaling)      (None, 180, 180, 3)       0         
+_________________________________________________________________
+conv2d (Conv2D)              (None, 180, 180, 16)      448       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 90, 90, 16)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 90, 90, 32)        4640      
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 45, 45, 32)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 45, 45, 64)        18496     
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 22, 22, 64)        0         
+_________________________________________________________________
+flatten (Flatten)            (None, 30976)             0         
+_________________________________________________________________
+dense (Dense)                (None, 128)               3965056   
+_________________________________________________________________
+dense_1 (Dense)              (None, 26)                3354      
+=================================================================
+Total params: 3,991,994
+Trainable params: 3,991,994
+Non-trainable params: 0
+```
+
+### Model Architecture v2 (After Implementing Image Augmentation and Dropout)
+```
+data_augmentation = tf.keras.Sequential([
+    tf.keras.layers.experimental.preprocessing.RandomFlip("horizontal", input_shape=(img_height, img_width, 3)),
+    tf.keras.layers.experimental.preprocessing.RandomRotation(0.1),
+    tf.keras.layers.experimental.preprocessing.RandomZoom(0.1),])
+
+model = tf.keras.Sequential([
+  data_augmentation,
+  tf.keras.layers.experimental.preprocessing.Rescaling(1./255),
+  tf.keras.layers.Conv2D(16, 3, padding='same', activation='relu'),
+  tf.keras.layers.MaxPooling2D(),
+  tf.keras.layers.Conv2D(32, 3, padding='same', activation='relu'),
+  tf.keras.layers.MaxPooling2D(),
+  tf.keras.layers.Conv2D(64, 3, padding='same', activation='relu'),
+  tf.keras.layers.MaxPooling2D(),
+  tf.keras.layers.Dropout(0.2),
+  tf.keras.layers.Flatten(),
+  tf.keras.layers.Dense(128, activation='relu'),
+  tf.keras.layers.Dense(num_classes)])
+model.compile(optimizer='adam',
+              loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+              metrics=['accuracy'])
+model.summary()
+
+Model: "sequential_2"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+sequential_1 (Sequential)    (None, 180, 180, 3)       0         
+_________________________________________________________________
+rescaling_2 (Rescaling)      (None, 180, 180, 3)       0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 180, 180, 16)      448       
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 90, 90, 16)        0         
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 90, 90, 32)        4640      
+_________________________________________________________________
+max_pooling2d_4 (MaxPooling2 (None, 45, 45, 32)        0         
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 45, 45, 64)        18496     
+_________________________________________________________________
+max_pooling2d_5 (MaxPooling2 (None, 22, 22, 64)        0         
+_________________________________________________________________
+dropout (Dropout)            (None, 22, 22, 64)        0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 30976)             0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 128)               3965056   
+_________________________________________________________________
+dense_3 (Dense)              (None, 26)                3354      
+=================================================================
+Total params: 3,991,994
+Trainable params: 3,991,994
+Non-trainable params: 0
+_________________________________________________________________
 ```
 
 ## Model Performance 
