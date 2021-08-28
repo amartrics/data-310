@@ -1,6 +1,6 @@
 # Final Project
 ## Problem Statement: Using Computer Vision to Identify ASL Letters
-For my final project, I trained a convolutional neural network on a dataset of images from Kaggle to classify American Sign Language Letters. 
+For my final project, I trained a convolutional neural network on a dataset of images from Kaggle to classify American Sign Language Letters, in the hopes of building a form of "computer vision" capable of translating ASL to text or speech. 
 
 ## The Data 
 ### Training & Validation Data
