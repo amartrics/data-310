@@ -10,7 +10,7 @@ For my final project, I trained a convolutional neural network on a dataset of i
 ![image](https://user-images.githubusercontent.com/70035366/131227638-bdfa2d4a-4f3f-4596-a118-a82f013b33b2.png)
 
 ## The Model
-'''
+```python
 num_classes = 26
 model = tf.keras.Sequential([
   tf.keras.layers.experimental.preprocessing.Rescaling(1./255, input_shape=(img_height, img_width, 3)),
@@ -27,7 +27,7 @@ model.compile(optimizer='adam',
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
               metrics=['accuracy'])
 model.summary()
-'''
+```
 
 ## Model Performance 
 ### Training & Validation Accuracy and Loss (10 Epochs, No Image Distortion) 
