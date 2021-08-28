@@ -1,6 +1,8 @@
 # Final Project: Using Computer Vision to Identify ASL Letters
 ## Abstract
-For my final project, I trained a convolutional neural network on a dataset of images from Kaggle to classify American Sign Language Letters, in the hopes of building a form of "computer vision" capable of translating ASL to text or speech. 
+According to the most recent statistics, between 250,000 and 500,000 people use American Sign Language (ASL) in the United States today, although this number has been estimated to be as large as 1,500,000. A wide variety of individuals use sign language and identify as Deaf, which according to the National Association of the Deaf (NAD), is a cultural group who "have inherited their sign language, use it as a primary means of communication among themselves, and hold a set of beliefs about themselves and their connection to the larger society." Although many Deaf individuals and others who use ASL on a daily basis have little problem communicating with others regardless of their hearing ability, adapting ASL for use by translation technologies and natural language processing on a broad scale could potentially make the world a lot more accessible for the Deaf community.  
+
+For my final project, I trained a convolutional neural network on a dataset of images from Kaggle to classify American Sign Language Letters in the hopes of building a form of "computer vision" capable of recognizing the ASL alphabet. In the future, adapting and refining this technology could allow more accessibility for Deaf individuals in the workforce or in commercial settings (e.g., a restaurant kiosk capable of recognizing a signed command, translating it to text or speech, and relaying it to a person who doesn't understand ASL). This technology could also be applied in reverse to translate speech and text to ASL (e.g., a person who doesn't know ASL could type a sentence and have an app on their phone sign out a cohesive message for them). 
 
 ## The Data 
 ### Training & Validation Data
@@ -147,6 +149,11 @@ Discuss why you used two different test datasets, ramifications of the model's f
 ## Conclusion
 
 ## Sources
+### Literature 
+https://www.nad.org/resources/american-sign-language/community-and-culture-frequently-asked-questions/    
+https://en.wikipedia.org/wiki/American_Sign_Language    
+https://www.jstor.org/stable/pdf/26190621.pdf?casa_token=PPfABv4JnVEAAAAA:fIDLHurDDPhQptqw2LevuWFYUjF0zRky62cwbJ-oifI7aZD5qQbBDejMYajqAlmtxr3s0mtEtdnWhQ-wTdinEBrnJhDXlvxmLezjphP3uEpUgrlzXhbl    
+
 ### TensorFlow Tutorials
 https://www.tensorflow.org/tutorials/load_data/images    
 https://www.tensorflow.org/tutorials/keras/classification    
