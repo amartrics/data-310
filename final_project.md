@@ -14,7 +14,9 @@ For my final project, I trained a convolutional neural network on a dataset of i
 ![image](https://user-images.githubusercontent.com/70035366/131227168-320c765b-b143-4e52-bfc8-1d7c7cbb4dc8.png)
 
 ### Testing on New Data
-![image](https://user-images.githubusercontent.com/70035366/131227276-b12da3c7-7799-4af9-8c0f-2ae859fa5942.png)
+![image](https://user-images.githubusercontent.com/70035366/131227463-dbf42c0a-7eec-4ad4-aa05-e452469b3dc5.png)
+![image](https://user-images.githubusercontent.com/70035366/131227408-716c491c-cf0b-4b80-807c-b7d6b2711e39.png)
+![image](https://user-images.githubusercontent.com/70035366/131227508-456bb178-ef11-45c3-8401-10cde9cbfc15.png)
 
 
 ## Conclusion
