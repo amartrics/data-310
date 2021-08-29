@@ -7,12 +7,10 @@ For my final project, I trained a convolutional neural network on a dataset of i
 ## The Data 
 ### Training & Validation Data
 ![image](https://user-images.githubusercontent.com/70035366/131227615-08d1fa3d-c5e7-4d29-b0a4-057926833bcf.png)
-
 I began my search for data on Kaggle and found several promising datasets. The dataset I ultimately decided to use for training and validation purposes consisted of 2,515 cropped images of ASL letters on a black background. The image above represents a few images from the dataset and their true labels. After downloading the original dataset, I deleted all subdirectory folders in the download containing ASL *numbers* from the parent folder I planned to build my data path from, since I was only interested in training my model on letters. I then split the trimmed original dataset of 1,815 images into a training dataset of 1,452 images and a validation dataset of 363 images. 
 
 ### Augmented Training & Validation Data
 ![image](https://user-images.githubusercontent.com/70035366/131227638-bdfa2d4a-4f3f-4596-a118-a82f013b33b2.png)
-
 After initial training, the model demonstrated severe overfitting, as illustrated in the "Model Performance" section of this report. To reduce the probability of the model becoming overly familiar with the training dataset, and thus becoming unable to accurately make predictions about new testing data, I augmented the visual data I was using to create more diversity in the images the model would be trained on. This is illustrated in the implementation of the "data_augmentation" variable in the "sequential_2" model. 
 
 ## The Model
@@ -130,12 +128,10 @@ As stated earlier in the report, some image augmentation was necessary to reduce
 ## Model Performance 
 ### Training & Validation Accuracy and Loss (10 Epochs, No Image Distortion) 
 ![image](https://user-images.githubusercontent.com/70035366/131230666-f1e7ca8c-98fd-4fac-bbe6-8438e8a84193.png)
-
 This graph illustrates the performance of the Sequential model with its original structure after running for 10 epochs. The plot clearly demonstrates a disconnect between the training and validation accuracies and severe overfitting. Although I am not quite sure why overfitting occured at such an extreme degree here, it was problematic enough for me to warrant augmenting the training data to prevent a total failure of the model during testing. 
 
 ### Training & Validation Accuracy and Loss (15 Epochs, With Image Distortion and Dropout Implemented) 
 ![image](https://user-images.githubusercontent.com/70035366/131231016-13d0e6e0-43db-47d2-b972-ed85d0a4867b.png)
-
 Augmenting the training data and adding a dropout layer to the model, as well as running the model for 15 as opposed to 10 epochs, seemed to significantly decrease the amount of overfitting present in the model's training phase. Notably, the training and validation accuracies as well as losses correlated with one another at a much closer rate, with the higher validation accuracy and lower validation loss indicating better odds of predicting correctly on new data (e.g., the test dataset). 
 
 ### Testing on New Data
@@ -149,9 +145,10 @@ Augmenting the training data and adding a dropout layer to the model, as well as
 ![image](https://user-images.githubusercontent.com/70035366/131231155-1dadca9c-8050-4c2a-aabe-1e110267169e.png)
 ![image](https://user-images.githubusercontent.com/70035366/131231163-c70d83f0-76b5-401c-95eb-016eff803c3b.png)
 
-I pulled two different datasets from Kaggle to test my model in the hopes that my model would do well on either one or the other. Unfortunately, the model still seems to be relatively naive when it comes to predicting on new data, and did not do extraordinarily well when faced with the task of labelling unfamiliar images of ASL letters. One key thing to note about the training images is that they all featured a perfectly black background, with the signer's hand being the only colored object in the photo. It is possible that by training on such isolated visual data, the model learned to associate the concept of certain colors, and not just shapes, that comprise an ASL signer's hand with specific letters. This would explain why the model performed poorly on real-life examples of ASL in action, such as in the testing images that feature more complex and colorful backgrounds, despite possessing a high predicted accuracy. Additionally, given the fact that many ASL letters do happen to look similar to one another - for instance, the letters *a*, *m*, *n*, *t*, and *s* are all composed of a closed fist with one 
+I pulled two different datasets from Kaggle to test my model in the hopes that my model would do well on either one or the other. Unfortunately, the model still seems to be relatively naive when it comes to predicting on new data, and did not do extraordinarily well when faced with the task of labelling unfamiliar images of ASL letters. One key thing to note about the training images is that they all featured a perfectly black background, with the signer's hand being the only colored object in the photo. It is possible that by training on such isolated visual data, the model learned to associate the concept of certain colors, and not just shapes, that comprise an ASL signer's hand with specific letters. This would explain why the model performed poorly on real-life examples of ASL in action, such as in the testing images that feature more complex and colorful backgrounds, despite possessing a high predicted accuracy. Additionally, given the fact that many ASL letters do happen to look similar to one another - for instance, the letters *a*, *m*, *n*, *t*, and *s* are all composed of a closed fist with the same hand's thumb in slightly different positions - it is understandable that a rather simple convolutional neural network was not able to identify ASL signing in action as it would appear in the real world. 
 
 ## Conclusion
+There is still a lot of progress to be achieved when it comes to developing automated ASL recognition technology that could feasibly be adapted for real-world situations, especially concerning areas where an error on the part of the machine can result in serious miscommunication. This model's testing results, paired with the fact that it was only trained on images finger-spelling - aka the ASL alphabet - is also quite telling of both the complexity of human language in all its forms, verbal and non-verbal, as well as the limits of machine learning. Further refinement of this model or similar ML techniques, such as live video feeds that act as input to a motion tracking form of computer vision capable of recognizing ASL in motion, may be a step forward towards better communication for all. 
 
 ## Sources
 ### Literature on ASL and the Deaf Community
