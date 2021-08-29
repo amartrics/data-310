@@ -2,18 +2,18 @@
 ## Abstract
 According to the most recent statistics, between 250,000 and 500,000 people use American Sign Language (ASL) in the United States today, although this number has been estimated to be as large as 1,500,000. A wide variety of individuals use sign language and identify as Deaf, which according to the National Association of the Deaf (NAD), is a cultural group who "have inherited their sign language, use it as a primary means of communication among themselves, and hold a set of beliefs about themselves and their connection to the larger society." Although many Deaf individuals and others who use ASL on a daily basis have little problem communicating with others regardless of their hearing ability, adapting ASL for use by translation technologies and natural language processing on a broad scale could potentially make the world a lot more accessible for the Deaf community.  
 
-For my final project, I trained a convolutional neural network on a dataset of images from Kaggle to classify American Sign Language Letters in the hopes of building a form of "computer vision" capable of recognizing the ASL alphabet. In the future, adapting and refining this technology could allow more accessibility for Deaf individuals in the workforce or in commercial settings (e.g., a restaurant kiosk capable of recognizing a signed command, translating it to text or speech, and relaying it to a person who doesn't understand ASL). This technology could also be applied in reverse to translate speech and text to ASL (e.g., a person who doesn't know ASL could type a sentence and have an app on their phone sign out a cohesive message for them). 
+For my final project, I trained a convolutional neural network on a dataset of images from Kaggle to classify American Sign Language letters in the hopes of building a computer vision model capable of recognizing the ASL alphabet and predicting its textual counterpart. In the future, adapting and refining this technology could allow more accessibility for Deaf individuals in the workforce or in commercial settings (e.g., a restaurant kiosk capable of recognizing a signed command, translating it to text or speech, and relaying it to a person who doesn't understand ASL). This technology could also be applied in reverse to translate speech and text to ASL (e.g., a person who doesn't know ASL could type a sentence and have an app on their phone sign out a cohesive message for them). 
 
 ## The Data 
 ### Training & Validation Data
 ![image](https://user-images.githubusercontent.com/70035366/131227615-08d1fa3d-c5e7-4d29-b0a4-057926833bcf.png)
 
-Discuss where you received the data, how you chose the data, how much data there is
+I began my search for data on Kaggle and found several promising datasets. The dataset I ultimately decided to use for training and validation purposes consisted of 2,515 cropped images of ASL letters on a black background. The image above represents a few images from the dataset and their true labels. After downloading the original dataset, I deleted all subdirectory folders in the download containing ASL *numbers* from the parent folder I planned to build my data path from, since I was only interested in training my model on letters. I then split the trimmed original dataset of 1,815 images into a training dataset of 1,452 images and a validation dataset of 363 images. 
 
 ### Augmented Training & Validation Data
 ![image](https://user-images.githubusercontent.com/70035366/131227638-bdfa2d4a-4f3f-4596-a118-a82f013b33b2.png)
 
-Discuss why you augmented the data and what augmenting the images would (hopefully) achieve
+After initial training, the model demonstrated severe overfitting, as illustrated in the "Model Performance" section of this report. To reduce the probability of the model becoming overly familiar with the training dataset, and thus becoming unable to accurately make predictions about new testing data, I augmented the visual data I was using to create more diversity in the images the model would be trained on. This is illustrated in the implementation of the "data_augmentation" variable in the "sequential_2" model. 
 
 ## The Model
 ### Model Architecture v1 (Without Implementing Image Augmentation and Dropout)
@@ -63,6 +63,7 @@ Total params: 3,991,994
 Trainable params: 3,991,994
 Non-trainable params: 0
 ```
+This code block shows the exact structure of the original model. After rescaling the input (tf.keras.layers.experimental.preprocessing.Rescaling), I layered several instances of 2d convolution (tf.keras.layers.Conv2D) and 2d max pooling (tf.keras.layers.MaxPooling2D) to isolate the defining features in each picture. This process involved sliding a matrix of weights over each pixel and performing element-wise multiplication with the data, before summing up the result to produce a single output. I then flattened the input from this result (tf.keras.layers.Flatten), filtered it through a dense layer with 128 nodes (tf.keras.layers.Dense), and then added a dense output layer with 26 nodes for 26 possible letter classifications. 
 
 ### Model Architecture v2 (After Implementing Image Augmentation and Dropout)
 ```python
@@ -124,14 +125,18 @@ Non-trainable params: 0
 _________________________________________________________________
 ```
 
+As stated earlier in the report, some image augmentation was necessary to reduce overfitting in the model. The rest of the model structure remained the same, with the exception of an added dropout layer (tf.keras.layers.Dropout), which randomly sets input units to 0 during training time to help prevent overfitting to an even greater extent than mere image augmentation. 
+
 ## Model Performance 
 ### Training & Validation Accuracy and Loss (10 Epochs, No Image Distortion) 
 ![image](https://user-images.githubusercontent.com/70035366/131230666-f1e7ca8c-98fd-4fac-bbe6-8438e8a84193.png)
 
-Discuss severe overfitting and how you addressed it
+This graph illustrates the performance of the Sequential model with its original structure after running for 10 epochs. The plot clearly demonstrates a disconnect between the training and validation accuracies and severe overfitting. Although I am not quite sure why overfitting occured at such an extreme degree here, it was problematic enough for me to warrant augmenting the training data to prevent a total failure of the model during testing. 
 
 ### Training & Validation Accuracy and Loss (15 Epochs, With Image Distortion and Dropout Implemented) 
 ![image](https://user-images.githubusercontent.com/70035366/131231016-13d0e6e0-43db-47d2-b972-ed85d0a4867b.png)
+
+Augmenting the training data and adding a dropout layer to the model, as well as running the model for 15 as opposed to 10 epochs, seemed to significantly decrease the amount of overfitting present in the model's training phase. Notably, the training and validation accuracies as well as losses correlated with one another at a much closer rate, with the higher validation accuracy and lower validation loss indicating better odds of predicting correctly on new data (e.g., the test dataset). 
 
 ### Testing on New Data
 #### Test Dataset 1
@@ -144,7 +149,7 @@ Discuss severe overfitting and how you addressed it
 ![image](https://user-images.githubusercontent.com/70035366/131231155-1dadca9c-8050-4c2a-aabe-1e110267169e.png)
 ![image](https://user-images.githubusercontent.com/70035366/131231163-c70d83f0-76b5-401c-95eb-016eff803c3b.png)
 
-Discuss why you used two different test datasets, ramifications of the model's failure in real-life application, what could be done to further refine the model
+I pulled two different datasets from Kaggle to test my model in the hopes that my model would do well on either one or the other. Unfortunately, the model still seems to be relatively naive when it comes to predicting on new data, and did not do extraordinarily well when faced with the task of labelling unfamiliar images of ASL letters. One key thing to note about the training images is that they all featured a perfectly black background, with the signer's hand being the only colored object in the photo. It is possible that by training on such isolated visual data, the model learned to associate the concept of certain colors, not just the distinctive shape, of an ASL signer's hand
 
 ## Conclusion
 
@@ -160,5 +165,6 @@ https://www.tensorflow.org/tutorials/keras/classification
 https://www.tensorflow.org/tutorials/images/classification  
 
 ### Data
+https://www.kaggle.com/ayuraj/asl-dataset
 https://www.kaggle.com/danrasband/asl-alphabet-test    
 https://www.kaggle.com/grassknoted/asl-alphabet
