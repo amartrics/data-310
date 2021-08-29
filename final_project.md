@@ -162,6 +162,6 @@ https://www.tensorflow.org/tutorials/keras/classification
 https://www.tensorflow.org/tutorials/images/classification  
 
 ### Data
-https://www.kaggle.com/ayuraj/asl-dataset
+https://www.kaggle.com/ayuraj/asl-dataset    
 https://www.kaggle.com/danrasband/asl-alphabet-test    
 https://www.kaggle.com/grassknoted/asl-alphabet
